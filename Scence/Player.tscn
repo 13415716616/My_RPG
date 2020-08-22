@@ -70,8 +70,8 @@ tracks/0/keys = {
 "values": [ 12, 13, 14 ]
 }
 
-[sub_resource type="CapsuleShape2D" id=5]
-radius = 29.4243
+[sub_resource type="CapsuleShape2D" id=7]
+radius = 19.2502
 
 [sub_resource type="StreamTexture" id=6]
 flags = 4
@@ -89,11 +89,11 @@ anims/rigth = SubResource( 3 )
 anims/up = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 5 )
+position = Vector2( 1.41422, 6.36398 )
+shape = SubResource( 7 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0, -2.82843 )
+position = Vector2( 0.707108, -8.32654 )
 texture = SubResource( 6 )
 vframes = 4
 hframes = 4
-frame = 8

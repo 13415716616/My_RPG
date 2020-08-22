@@ -1,9 +1,6 @@
 extends KinematicBody2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var dialog=preload("res://Scence/DialogBox.tscn")
 var vec=Vector2()
 
 export var Speed=100
@@ -27,5 +24,11 @@ func _process(delta):
 	if vec.y<0:
 		$AnimationPlayer.play("up")
 	move_and_slide(vec*300)
-	print(vec)
 	pass
+
+
+func _on_Area2D_area_entered(area):
+	if area.name=="NPC":
+		print(area.name)
+		$Area2D.visible=true
+	pass # Replace with function body.

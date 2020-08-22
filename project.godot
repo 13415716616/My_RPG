@@ -16,7 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="MyRPG"
+run/main_scene="res://Scence/TestScence.tscn"
 config/icon="res://icon.png"
+
+[gui]
+
+theme/use_hidpi=true
 
 [rendering]
 

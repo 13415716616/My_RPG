@@ -13,10 +13,13 @@ func _ready():
 
 func ShowLabel():
 	$dslogbox/RichTextLabel.text=label[0]
-	if Input.get_action_strength("ui_down"):
+	if Input.is_action_pressed("ui_down"):
 		print("ok")
 		$dslogbox/RichTextLabel.text=label[1]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if Input.is_action_just_pressed("ui_down"):
+		ShowLabel()
+	pass
+
